@@ -1,0 +1,498 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    scroll-behavior: smooth;
+   
+}
+:root{
+    --color: #fff;
+    --textColor: black;
+    --backgroundNavbar: #1E3163;
+}
+
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+   
+    width: 100%;
+    color: var(--color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 100;
+    transition: background-color 0.5s ease-in-out;
+    
+}
+
+.up__arrow{
+    position: absolute;
+    right: 10px;
+    top:70px;
+    background-color: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: transform 0.5s ease-in-out, background-color 0.2s ease-in-out, top 0.5s ease-in-out;
+
+}
+
+.up__arrow-transparent{
+    background-color: inherit;
+
+    transition: background-color 0.7s ease-in-out;
+    
+}
+
+.arrow__desplace{
+    transform: scale(1);
+    top: 120px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotar > path{
+    
+    transition: fill 0.5s ease-in-out;
+}
+.path__color{
+    fill: transparent;
+    transition: fill 0.5s ease-in-out;
+}
+
+.path__transparent{
+    fill: var(--color);
+    transition: fill 0.5s ease-in-out;
+}
+
+.arrow__top{
+    animation: topArrow 0.5s ease-in-out forwards;
+}
+
+.arrow__bottom{
+    animation: bottomArrow 0.5s ease-in-out forwards;
+}
+
+.bottom__rotate-bottom{
+    transform: rotate(3.142rad);
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotar{
+  
+    transition: transform 0.5s ease-in-out;
+}
+
+
+@keyframes topArrow {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-110px);
+    }
+}
+
+@keyframes bottomArrow {
+    0%{
+        transform: translateY(-110px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.navbar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.navbar__logo > p{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar__logo > p > span{
+    font-weight: 400;
+}
+
+.navbar__logo > img{
+    width:  50px;
+    height: 50px;
+}
+
+.navbar__nav{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.navbar__nav > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   
+}
+
+.navbar__nav > ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    border-bottom: 3px solid;
+    cursor: pointer;
+    border-color: transparent;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.navbar__nav > ul li:hover{
+    border-color: inherit;
+}
+
+/* header */
+
+.header{
+    width: 100;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images2.alphacoders.com/119/thumb-1920-1191759.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: var(--color);
+    
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.459);
+}
+
+.header__paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    z-index: 99;
+}
+
+.header__paragraph > h2{
+  width: 100%;
+  text-align: center;
+   
+}
+
+.header__paragraph > p{
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+.container h2{
+    margin-top: 2rem;
+}
+.card{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card h2{
+    margin-top: 0.5rem;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+
+
+.card a{
+    display: block;
+    background-color: rgb(
+        244, 127, 255);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color:rgb(252, 252, 252);
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor:pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card a:hover{
+    background-color: rgb(139, 50, 128);
+    
+}
+
+.footer__paralax svg path{
+    fill: var(--color);
+}
+
+.footer__paralax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/random/1920×1080/?pets');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img__bottom{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+}
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+footer h3{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+footer p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+
+}
+
+.footer__bl{
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-top: 3rem;
+    cursor: pointer;
+}
+
+.footer__bl span{
+    font-weight: 500;
+}
+
+.footer__navbar > ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.footer__navbar > ul > li{
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-bottom: 3px solid;
+    border-color: transparent;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.footer__navbar > ul > li:hover{
+    
+    border-color: rgb(146, 67, 133);
+
+}
+
+.navbar__background{
+    background-color: var(--backgroundNavbar);
+    color: var(--color);
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+@media (min-width: 768px) {
+   
+    .container h2{
+        font-size: 2rem;
+    }
+    .card__img{
+        width: 100%;
+    }
+
+
+    .card{
+  
+        display: flex;
+        flex-direction: row;
+     
+    }
+
+    .card:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+   .card__body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center; 
+   }
+
+   .card__body h2{
+    width: 100%;
+    text-align: left;
+   }
+    .card__img img{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .card__a{
+        width: 100%;
+    }
+
+    .card__a a{
+        width: max-content;
+    }
+
+    .navbar{
+        padding: 10px 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+
+
+    .navbar__logo{
+        padding: 0;
+    }
+
+    .up__arrow{
+        top: 70px;
+        right: 50px;
+       
+    }
+    .arrow__top{
+        animation: topArrow 0.5s ease-in-out forwards;
+    }
+    
+    .arrow__bottom{
+        animation: bottomArrow 0.5s ease-in-out forwards;
+    }
+
+    
+@keyframes topArrow {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-65px);
+    }
+}
+
+@keyframes bottomArrow {
+    0%{
+        transform: translateY(-65px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+    
+
+}
+
+@media (min-width: 1024px){
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 70%;
+    }
+    .navbar__padding{
+        padding: 20px 200px;
+    }
+
+    .up__arrow{
+        top: 85px;
+        right: 100px;
+       
+    }
+
+    .arrow__top{
+        animation: topArrow 0.5s ease-in-out forwards;
+    }
+    
+    .arrow__bottom{
+        animation: bottomArrow 0.5s ease-in-out forwards;
+    }
+
+    
+@keyframes topArrow {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-85px);
+    }
+}
+
+@keyframes bottomArrow {
+    0%{
+        transform: translateY(-85px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.footer__paralax{
+    
+    background-position: center;
+    background-size: contain;
+}
+
+}
